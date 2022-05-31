@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Red+Hat+Display:wght@400;500&display=swap");
+* {
+  user-select: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: #4070f4;
+}
+body .container {
+  position: relative;
+  max-width: 630px;
+  width: 100%;
+}
+body .container .forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 440px;
+}
+body .container .form {
+  border-radius: 10px;
+  width: 50%;
+  padding: 30px;
+  background: #fff;
+  transition: margin-left 0.18s ease;
+}
+body .container .form .title {
+  position: relative;
+  font-size: 27px;
+  font-weight: 600;
+}
+body .container .form .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background-color: #4070f4;
+  border-radius: 25px;
+}
+body .container .form .input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
+}
+body .container .form .input-field input {
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid transparent;
+}
+body .container .form .input-field input:is(:focus, :valid) {
+  border-bottom-color: #4070f4;
+}
+body .container .form .input-field input:is(:focus, :valid) ~ i {
+  color: #4070f4;
+}
+body .container .form .input-field .icon {
+  left: 0;
+}
+body .container .form .input-field i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 23px;
+  transition: all 0.2s ease;
+}
+body .container .form .input-field i .showHidePW {
+  right: 0;
+  cursor: pointer;
+  padding: 10px;
+}
+body .container .form .checkbox-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+body .container .form .checkbox-text .checkbox-content {
+  display: flex;
+  align-items: center;
+}
+body .container .form .checkbox-text .checkbox-content input {
+  margin: 0 8px -2px 4px;
+  accent-color: #4070f4;
+}
+body .container .form .checkbox-text .checkbox-content .text {
+  color: #333;
+  font-size: 14px;
+}
+body .container .form a {
+  text-decoration: none;
+  font-size: 14px;
+}
+body .container .form a:hover {
+  text-decoration: underline;
+}
+body .container .form .button {
+  margin-top: 35px;
+}
+body .container .form .button input {
+  border: none;
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  background: #4070f4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+body .container .form .button input:hover {
+  background-color: #265df2;
+}
+body .container .form .login-signup {
+  margin-top: 30px;
+  text-align: center;
+}
+body .login .user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+body .login .user input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #7a7a7a;
+  width: 100%;
+  padding: 10px;
+}
+body .login .user input:focus {
+  border-bottom: 2px solid #000;
+}
+body .login .user .loginBtn {
+  background: #00b533;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+body .degree-zone {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  width: 80%;
+}
+body .degree-zone .degre-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: sans-serif;
+}
+body .degree-zone button {
+  padding: 2.5rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: #295129;
+  color: #fff;
+}
+body .degree-zone button:active {
+  transform: scale(0.9);
+}
+body .game-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+body .game-zone .result-zone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: grid;
+  place-items: center;
+}
+body .game-zone .result-zone > div {
+  width: 400px;
+  height: 400px;
+  background-color: dodgerblue;
+  display: grid;
+  place-items: center;
+  padding: 0 2rem;
+  text-align: center;
+}
+body .game-zone .result-zone > div .row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+body .game-zone .result-zone > div .row .point-group {
+  height: 50px;
+  display: flex;
+  column-gap: 5px;
+  padding: 0.5rem;
+}
+body .game-zone .result-zone > div .row .point-group .point-result {
+  width: 50px;
+  color: #fff;
+  font-size: 30px;
+}
+body .game-zone .result-zone > div .row .point-group .point-result.point--success {
+  background-color: green;
+}
+body .game-zone .result-zone > div .row .point-group .point-result.point--fail {
+  background-color: red;
+}
+body .game-zone .result-zone > div .row .point-group .point-result.point--timeout {
+  background-color: black;
+}
+body .game-zone .result-zone > div .row .point-percent {
+  font-size: 30px;
+  color: #fff;
+}
+body .game-zone .result-zone > div .btn {
+  padding: 1rem 2rem;
+  font-size: 30px;
+}
+body .game-zone header {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+body .game-zone .quiz-zone {
+  padding: 1rem;
+  width: 800px;
+  height: 500px;
+  display: grid;
+  grid-template-rows: 0.2fr 1fr;
+}
+body .game-zone .quiz-zone .quiz {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  border: 1px solid lightblue;
+  background-color: #efed40;
+}
+body .game-zone .quiz-zone .quiz span {
+  font-size: 30px;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+body .game-zone .quiz-zone .quiz span:not(:nth-child(2)) {
+  background-color: red;
+  color: #fff;
+}
+body .game-zone .quiz-zone .answers {
+  display: flex;
+  flex-direction: column;
+}
+body .game-zone .quiz-zone .answers .row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+}
+body .game-zone .quiz-zone .answers .row .answer {
+  font-size: 40px;
+  background-color: lightblue;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s linear;
+}
+body .game-zone .quiz-zone .answers .row .answer:active {
+  transform: scale(0.95);
+}
+body .game-zone .points {
+  width: 1200px;
+  height: 50px;
+  display: flex;
+  column-gap: 5px;
+  border: 1px solid lightblue;
+  padding: 0.5rem;
+}
+body .game-zone .points .point {
+  width: 50px;
+  color: #fff;
+}
+body .game-zone .points .point--success {
+  background-color: green;
+}
+body .game-zone .points .point--fail {
+  background-color: red;
+}
+body .game-zone .points .point--timeout {
+  background-color: black;
+}
+body .hide {
+  display: none !important;
+}
+
+.modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  width: 25%;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
